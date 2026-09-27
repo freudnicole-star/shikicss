@@ -1,0 +1,637 @@
+.l-footer:after {
+  content: "*Gray Silence + Custom*";
+}
+
+@media screen and (min-width: 1px) {
+  html:root {
+	--white-color: 255, 255, 255;
+    --light-color: 191, 197, 208;
+    --dark-color: 159, 169, 181;
+    --bright-color: 173, 191, 222;
+    --dull-color: 111, 123, 125;
+    --input-color: 100, 106, 115;
+    --hover-bottoms-1: 35, 37, 43;
+    --buttoms-color: 67, 82, 101;
+    --hover-buttoms-2: 255, 92, 92;
+    --very-high-rating: 144, 159, 179;
+    --high-rating: 108, 130, 146;
+    --average-rating: 83, 99, 115;
+    --small-rating: 57, 67, 78;
+    --time-filled: 74, 91, 103;
+    --time-empty: 28, 30, 33;
+    --anime-inprocess: 128, 246, 255;
+    --anime-complete: 0, 238, 255;
+    --manga-inprocess: 254, 62, 139;
+    --manga-complete: 255, 0, 102;
+    --hover-color: 181, 60, 73;
+    --shadows-color: 121, 140, 171;
+    --block-color: 65, 71, 82;
+    --menu-back: 40, 43, 49;
+    --nick-cover: 81, 94, 103;
+    --popup-color: 57, 63, 72;
+    --hundred: 1;
+  }
+}
+
+/* Убрать анимацию графика активности */
+.activity .graph.vertical .line .bar {
+    animation: none;
+}
+
+/* Убрать анимацию в истории */
+.p-profiles .profile-head .c-history .entry .title {
+	animation: none;
+}
+
+/* Фикс цвета ссылок в истории */
+html[data-color-mode=light] {
+  --link-color: #adbfde;
+}
+
+/* Слегка выровнял кнопки всплывающего справа меню */
+.l-top_menu-v2 .submenu>a.icon-site_rules span.text {
+	display: none;
+}
+.l-top_menu-v2 .submenu>a.icon-site_rules:after {
+	content: 'Правила';
+}
+
+/* Растягивание контейнера ховера на 2+ строки в списках аниме/магни при необходимости (для длинных названий, которые не вмещаются в одну)*/
+tr.user_rate.selectable.editable:after {
+    height: calc(100% - 0px);
+}
+
+/* Фикс списка манги на телефоне с удалением лишних столбцов */
+@media screen and (max-width: 480px) {
+  .p-user_rates-index .list-lines tr .num.hoverable:nth-child(4), .p-user_rates-index .list-lines tr .num.hoverable:nth-child(5), th.num.order-control[data-order="chapters"], th.num.order-control[data-order="volumes"] {
+    display: none !important;
+  }
+  th.num.order-control[data-order="kind"] {
+    display: table-cell !important;
+  }
+}
+
+/* Скролл в истории для длинных названий */
+.p-profiles .profile-head .c-history .entry:hover .title {
+    overflow: auto;
+  	scrollbar-width: thin;
+  	scrollbar-color: rgba(191, 197, 208, 0.25) rgba(0, 0, 0, 0);
+}
+
+/* Микрофикс скролла */
+.p-profiles .profile-head .c-history .entry .title {
+    text-overflow: clip;
+}
+
+/* Фикс второй строки истории для малых разрешений */
+.p-profiles .profile-head .c-history .entry .misc {
+	text-overflow: ellipsis !important;
+}
+
+/* Убрал баг отображения после названий студий в списке аниме */
+.p-user_rates-index .stat-categories .category:after {
+    display: none;
+}
+
+/* Выравнял количество коллекций на малом разрешении */
+@media screen and (max-width: 767px) {
+  .p-profiles .profile-head .c-info .c-additionals div a, .p-profiles .profile-head .c-info .c-additionals div span {
+    padding: 1.3rem 15px 10px 15px;
+  }
+}
+
+/* Цвет ховера списков аниме и манги на малых разрешениях */
+@media screen and (max-width: 767px) {
+  a:hover {
+      color: rgba(var(--hover-bottoms-1), 1) !important;
+  }
+}
+
+/* Фоновое изображение */
+body {
+  background: url("https://psv4.userapi.com/s/v1/d/ix1DlZ6AByhQ_pzfyo9B7SkKtM6tA9O7n1qkCCGhDt52HKRQKQR0T09tl80CeS79D9s-fZc7moStQINw-NSm_sV3Lqm_9KAHqLQ7k36Xx8BQst3l85QY4g/NovyShikifon.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Полупрозрачная рамка */
+@media (min-width: 1200px) {
+.l-page { outline: 20px solid rgba(255, 255, 255, 0.3); margin-bottom: 20px; }
+}
+
+/* Гиф аватарка
+.p-profiles .profile-head .avatar {
+	background: url("https://psv4.userapi.com/s/v1/d/RsEQEfRHVU8eZ-Tg8gEY8yfRMk-J3t6XDiSxQvYJ7nhgZojpGiKykhk0Hs3YSll1biP92hbRRFMJx2DtdYhTlzwI4XsXrqy89sqk0tx-UKstun5cgOLH4w/Snap.gif") center / cover;
+  	border-radius: 15px
+}
+
+/* Скрыть статичный аватар
+.p-profiles .profile-head .avatar img {
+	visibility: hidden;
+}
+*/
+
+/* Замена постера для Кадзуя Наканиси *//*
+[href*="people/55494-kazuya-nakanishi"] {
+  --show-default: 0;
+  --custom-image: url("https://sun9-82.userapi.com/s/v1/ig2/GgIAyn3zBzGKBHUkVPDxQqBb9CTFYfOf6DXNAnaX8TSv2AFhj29vtE0AE76GuxzD_xyqzf8EZNsYiBm_r-lJdpjU.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
+}
+*/
+
+/* Замена постера для Фумия Томодзаки */
+[href*="characters/165743-"] {
+  --show-default: 0;
+  --custom-image: url("https://sun9-24.userapi.com/s/v1/ig2/F2UXyzeMEHlXUxRbHIYc7JKazy5F4IR7p09pfeRlX__GPj4NBpTRxh7nGyDx21ugzaJmzzBMdnqxxH0SI_D3RRQb.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
+}
+
+/* Замена постера для Анна Кёяма */
+[href*="characters/170-anna-kyouyama"] {
+  --show-default: 0;
+  --custom-image: url("https://sun9-52.userapi.com/s/v1/ig2/31LNNRicIAdAKPlvYs7VS5kTN6yhfJXbNun1AhVrgZk5bQf9ndphs3NX7ytxJXVAKVVKb-tyWc50o7xHaHQRkrCX.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
+}
+
+/* Замена постера для Йо Асакура */
+[href*="characters/167-you-asakura"] {
+  --show-default: 0;
+  --custom-image: url("https://sun9-45.userapi.com/s/v1/ig2/N7dfPp98czXQeGXtegQAINJUcMAkKPHorNWe_iRHWyMnbuicQPjShkUbQCVMxs-SJlTdQ0fXVxtuFDrluglDBTMT.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
+}
+
+/* Замена постера для Хачиман Хикигая */
+[href*="characters/67065-hachiman-hikigaya"] {
+  --show-default: 0;
+  --custom-image: url("https://sun9-7.userapi.com/s/v1/ig2/IIwMDXF2Mt2INC4H7gCqQOeOiMTtJ0rq-ymx0e8T5Z51ifWwu5AU2HJ483rl2HtF9uGoo0wzbUA07QWlPS87fRnE.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
+}
+
+/* Замена постера для Сид Кагэно */
+[href*="characters/171572-cid-kagenou"] {
+  --show-default: 0;
+  --custom-image: url("https://sun9-82.userapi.com/s/v1/ig2/GgIAyn3zBzGKBHUkVPDxQqBb9CTFYfOf6DXNAnaX8TSv2AFhj29vtE0AE76GuxzD_xyqzf8EZNsYiBm_r-lJdpjU.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
+}
+
+/* Замена постера для Ко Ямори */
+[href*="characters/177824-kou-yamori"] {
+  --show-default: 0;
+  --custom-image: url("https://sun9-88.userapi.com/s/v1/ig2/xzthW8LnSlFwcU5JKcy9e38l6Tb81jag7OzrKm6eUfvtJG1gIxuxLKsmH86BPux8lPTT_JEs1dn6NndRCbUq5mVX.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&u=PD3PhAtzga8YruyaBbmx87UpYHWhAWwHn2EFZjwpbJo&cs=160x0");
+}
+
+/* Замена постера для Ироха Ишики */
+[href*="characters/110743-iroha-isshiki"] {
+  --show-default: 0;
+  --custom-image: url("https://sun9-20.userapi.com/s/v1/ig2/0YCmRDf00BlpVwCjK6XdIwot1qa6-QLY7HdR25lyVOI6fGaNCesuBYtHqVAzEzLEkJO2dcj_kbL9bHLcddmObjPT.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
+}
+
+/* Замена постеров ачивок */
+.b-achievement .c-image a::after,
+.b-badge::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--user-image, none);
+  pointer-events: none;
+  
+  border-radius: 11px;
+  width: 104%;
+  height: 106%;
+  max-width: 105%;
+  margin-left: -2%; 
+}
+
+/* Замена общего (lvl6) */
+.level-6 [href*="/achievements/common/animelist"] {
+  --user-image: url("https://sun9-58.userapi.com/s/v1/ig2/oaKakltVohmZcVlAXiWiJBtC1J3uvoYHEr2yEqYT-rsZCG6uQUm97DfrvsoQbHCQE_u1MX7An4_Zv34tI7zKgTQh.jpg?quality=95&as=32x16,48x24,72x36,108x54,160x80,240x120,360x180,480x240,500x250&from=bu&cs=500x0") center / cover;
+}
+
+/* Замена романтика (lvl2) */
+.level-2 [href*="/achievements/genre/romance"] {
+  --user-image: url("https://sun9-46.userapi.com/s/v1/ig2/wegtXTkblnxT82cWHJ3YwEyYfNA46zlNTzw1Da1zmYMeoMr4wZL5cYUuvQ2Wp4vwA-90t1GBWrlcoz9pRo15OaCW.jpg?quality=95&as=32x16,48x24,72x36,108x54,160x80,240x120,360x180,480x240,500x250&from=bu&u=AUeUzUlR2tKlS9HevkjIjf2T9ym_Re-_RlbA6MgwYPw&cs=500x0") center / cover;
+}
+
+/* Замена комедии (lvl1) */
+.level-1 [href*="/achievements/genre/comedy"] {
+  --user-image: url("https://sun9-24.userapi.com/s/v1/ig2/C8BEhfAjEPlO0O3Stos8Dqk_-tvMq8sFYu471l8WWh-oYTUwIrLPKDLonnfygNgLeKqeHiy5rVgs1pFgggCNFxx2.jpg?quality=95&as=32x16,48x24,72x36,108x54,160x80,240x120,360x180,480x240,500x250&from=bu&cs=500x0") center / cover;
+}
+
+/* Замена драмы (lvl2) */
+.level-2 [href*="/achievements/genre/drama"] {
+  --user-image: url("https://sun9-30.userapi.com/s/v1/ig2/eJrss4l3G65c9je8e6vVnc_xmRKEN1bGSQKAhuGFENYG283BPWyru2eTDEOo-V4WbSR0KiDZ-nzdCW7aX5YZAYZ1.jpg?quality=95&as=32x16,48x24,72x36,108x54,160x80,240x120,360x180,480x240,500x250&from=bu&cs=500x0") center / cover;
+}
+
+/* Замена безумия (lvl1) */
+.level-1 [href*="/achievements/genre/dementia_psychological"] {
+  --user-image: url("https://sun9-5.userapi.com/s/v1/ig2/lD7ngfcC3rF24OSA9dy6T1IODEXUsr4KF7Km_RN8Lu36DBc5rCMt7okBWQbIV_bobMLkyNvmtovEaITWLyXLeCAk.jpg?quality=95&as=32x16,48x24,72x36,108x54,160x80,240x120,360x180,480x240,500x250&from=bu&cs=500x0") center / cover;
+}
+
+/* Замена военного (lvl1) */
+.level-1 [href*="/achievements/genre/military"] {
+  --user-image: url("https://sun9-81.userapi.com/s/v1/ig2/3Z-7n22AdQ0bupHmna9tAdEqtMY8C_jkvAUlI0tz3Q9GhiIS6SSonhJMX1hoRd8HPOt_bNVvyti7Zu40tmXUw2ME.jpg?quality=95&as=32x16,48x24,72x36,108x54,160x80,240x120,360x180,480x240,500x250&from=bu&cs=500x0") center / cover;
+}
+
+/* Баннер над профилем */
+@media (min-width: 1200px) {
+  .p-profiles-show .profile-head:before {
+    content: "";
+    display: block;
+    height: 300px; /* высота обложки */
+    background: url(//i.ibb.co/4gfgSNPy/newbanner.gif) repeat;
+    background-size: cover;
+    margin: -15px;
+    margin-bottom: 5px; /* отступ от нижней границы обложки */
+    border-radius: 15px 15px 0 0;
+  }
+  
+/* Фикс некорректного отображения онлайна */
+.p-profiles .profile-head .c-brief header.head .misc:before {
+    content: "";
+    display: block;
+    height: 300px;
+    margin: -15px;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (min-width: 767px) {
+    .p-profiles .profile-head .c-brief header.head .misc {
+      left: 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+    .p-profiles .profile-head .c-brief header.head .misc {
+      top: 235px;
+  }
+}
+
+/* Фиксы отображения франшизных и общих ачивок */
+body.p-achievements.p-profiles.p-profiles .b-badge img {
+  margin-left: -2%;
+  border-radius: 9px;
+  overflow: clip;
+}
+.p-achievements.p-profiles-index .c-franchises .b-badge::after, .p-achievements.p-profiles-index .c-franchises .b-badge::before
+{
+  margin-left: -2%;
+}
+.p-achievements.p-profiles-index .c-franchises .b-badge::after
+{
+  width: calc(100% - 10px) !important;
+  height: calc(100% - 15px) !important;
+  border-radius: 9px;
+  line-height: 327px;
+}
+body.p-achievements.p-profiles .cc-achievements
+{
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+/* Небольшой фикс текста в некоторых плитках */
+.b-catalog_entry .cover .misc span.role {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.b-catalog_entry .cover .title {
+  text-align: center;
+}
+
+/* Уменьшение контраста плиток профиля */
+.profile-content .b-user.avatar, .profile-content .b-club .logo {
+    filter: grayscale(100%) !important;
+}
+.b-achievement .c-image, .cc-franchises .b-badge {
+    filter: grayscale(80%) !important;
+}
+.b-achievement .c-image:hover, .cc-franchises .b-badge:hover, .p-profiles .profile-head .c-history .entry, .b-catalog_entry {
+   filter: grayscale(50%) !important;
+}
+.cc-franchises .b-badge:hover {
+  filter: grayscale(20%) !important;
+}
+.profile-content .b-user.avatar:hover, .profile-content .b-club .logo:hover, .p-profiles .profile-head .c-history .entry:hover, .b-catalog_entry:hover {
+    filter: grayscale(0%) !important;
+}
+
+/* Фикс фона в ачивках */
+body.p-achievements.p-profiles:after
+{
+  display: none !important;
+}
+body.p-achievements.p-profiles .l-page
+{
+  background-color: rgba(var(--menu-back), 0.8);
+}
+
+/* Фикс цветов на вкладке достижений */
+body.p-achievements.p-profiles header.head h1 a.back:before, body.p-achievements.p-profiles header.head h2 a.back:before, body.p-achievements.p-profiles .l-top_menu-v2 .menu-dropdown.main > span span, body.p-achievements.p-profiles a.menu-icon, body.p-achievements.p-profiles .l-top_menu-v2 .icon-profile:before, body.p-achievements.p-profiles .l-top_menu-v2 .menu-dropdown > span:after, body.p-achievements.p-profiles .l-top_menu-v2 .menu-dropdown .submenu-triangle:after,
+body.p-achievements.p-profiles header.head h2, body.p-achievements.p-profiles header.head h1
+{
+  color: rgba(var(--white-color), 1) !important;
+}
+.l-top_menu-v2 {
+    background: rgba(var(--menu-back), 0.4) !important;
+    box-shadow: 0 1px 29px 10px rgba(var(--menu-back), 0.5) !important;
+}
+body.p-achievements.p-profiles .l-top_menu-v2:hover {
+    background: linear-gradient(to bottom, rgba(var(--menu-back), 0.6) 0, rgba(var(--menu-back), 0.6) 70%, rgba(var(--menu-back), 0.6) 100%) !important;
+    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.3) !important;
+}
+body.p-achievements.p-profiles .l-top_menu-v2 .global-search .search-marker
+{
+    color: rgba(var(--light-color), 0.8);
+}
+body.p-achievements.p-profiles header.head.misc a
+{
+   color: rgba(var(--bright-color), var(--hundred)) !important; 
+}
+body.p-achievements.p-profiles::-webkit-scrollbar-thumb
+{
+  background-color: rgba(var(--light-color), 0.5) !important;
+}
+body.p-achievements.p-profiles::-webkit-scrollbar-thumb:hover
+{
+  background-color: rgba(var(--light-color), 0.7) !important;
+}
+body.p-achievements.p-profiles img
+{
+  -webkit-filter: brightness(0.9); 
+}
+body.p-achievements.p-profiles .l-top_menu-v2 .menu-dropdown > span .nickname
+{
+  color: rgba(var(--white-color), 1);
+}
+body.p-achievements.p-profiles .l-top_menu-v2 .global-search .hotkey-marker
+{
+  border: 1px solid rgba(var(--light-color), 0.2);
+  color: rgba(var(--light-color), 0.3);
+}
+body.p-achievements.p-profiles input
+{
+  color: unset;
+}
+body.p-achievements.p-profiles .l-top_menu-v2 .global-search .clear
+{
+  color: rgba(var(--light-color), 0.3);
+}
+body.p-achievements.p-profiles input
+{
+  color: rgba(var(--light-color), 0.3);
+}
+body.p-achievements.p-profiles ::-webkit-input-placeholder, ::-webkit-input-placeholder {
+    color: rgba(var(--dark-color), 1) !important;
+}
+body.p-achievements.p-profiles ::-moz-placeholder, ::-moz-placeholder {
+    color: rgba(var(--dark-color), 1) !important;
+}
+body.p-achievements.p-profiles :-ms-input-placeholder, :-ms-input-placeholder {
+    color: rgba(var(--dark-color), 1) !important;
+}
+body.p-achievements.p-profiles .l-page
+{
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.3) !important;
+}
+/* Текст внизу страницы */
+body.p-achievements.p-profiles .l-footer:before, body.p-achievements.p-profiles .l-footer .copyright {
+    color: rgba(var(--dark-color), 0.6);
+}
+body.p-achievements.p-profiles .l-footer .links a
+{
+    color: rgba(var(--bright-color), 0.5);
+}
+/* Цвета свичей */
+body.p-achievements.p-profiles .b-list_switchers > *:after {
+  color: rgba(var(--bright-color), 1);
+  box-shadow: inset 0 -2px 6px 2px rgba(0, 0, 0, 0.2);
+  background: rgba(var(--block-color), 0.6);
+}
+body.p-achievements.p-profiles .b-list_switchers > *:hover:after {
+  background: rgba(var(--block-color), 0.8);
+  box-shadow: inset 0 -4px 6px 2px rgba(0, 0, 0, 0.2);
+  color: rgba(var(--hover-color), 1);
+}
+body.p-achievements.p-profiles .b-list_switchers > *.selected:after {
+  background: rgba(var(--block-color), 1);
+  box-shadow: inset 0 -6px 6px 2px rgba(0, 0, 0, 0.2);
+  color: rgba(var(--hover-color), 0.8);
+}
+body.p-achievements.p-profiles .b-list_switchers > *.selected:hover:after {
+  background: rgba(var(--block-color), 0.8);
+  box-shadow: inset 0 -4px 6px 2px rgba(0, 0, 0, 0.2);
+  color: rgba(var(--hover-color), 1);
+}
+/* Цвета общих и жанровых ачивок */
+.p-user_rates-index .list-lines tr td .rate-text, .b-user_rate .rate-show .note
+{
+  color: rgba(var(--manga-inprocess), 1);
+}
+.p-user_rates-index .list-lines tr td .rewatches
+{
+  color: rgba(var(--anime-inprocess), 1);
+}
+.b-form a.remove
+{
+  background-color: rgba(var(--block-color), 0.5);
+}
+.b-form a.remove:hover
+{
+  background-color: rgba(var(--hover-buttoms-2), 0.6);
+  color: #e4e4e4 !important;
+}
+body.p-achievements.p-profiles .b-to-top .slide:before
+{
+  background: rgba(var(--menu-back), 0.4);
+}
+body.p-achievements.p-profiles .b-to-top .arrow:before
+{
+  color: rgba(var(--block-color), 0.8);
+  text-shadow: 0px 0px 1px #fff;
+}
+body.p-achievements.p-profiles
+{
+  color: rgba(var(--light-color), 1);
+}
+
+/* Цвет комментов в коллекциях */
+.b-catalog_entry .cover .image-decor>.text
+{
+  background: linear-gradient(to bottom, rgba(var(--menu-back), 0.6) 5%, rgba(var(--menu-back), 0.9) 66%);
+}
+.b-catalog_entry .cover .image-decor > .text:before
+{
+  background: unset;
+}
+
+/* Цвета менюшки в шапке (при взаимодействии) */
+@media only screen and (min-width: 768px) {
+  body.p-achievements.p-profiles .l-top_menu-v2 .menu-dropdown.profile.active .submenu-triangle img {
+    box-shadow: 0  0  0  3px rgb(var(--bright-color));
+  }
+  body.p-achievements.p-profiles .l-top_menu-v2:hover {
+    background: linear-gradient(to bottom, rgba(var(--menu-back), 0.6) 0, rgba(var(--menu-back), 0.6) 70%, rgba(var(--menu-back), 0.6) 100%) !important;
+  }
+  body.p-achievements.p-profiles .l-top_menu-v2 .submenu > a.active,
+  body.p-achievements.p-profiles .l-top_menu-v2 .menu-dropdown.profile .submenu-triangle:hover,
+  body.p-achievements.p-profiles .l-top_menu-v2 .menu-dropdown.active .submenu-triangle:hover,
+  body.p-achievements.p-profiles .l-top_menu-v2 .menu-dropdown > span:hover,
+  body.p-achievements.p-profiles .l-top_menu-v2 .submenu > a:hover,
+  body.p-achievements.p-profiles .l-top_menu-v2 .submenu > a.active:hover {
+    background: rgba(var(--bright-color), 0.15);
+    color: rgba(var(--white-color), var(--hundred)) !important;
+  }
+  body.p-achievements.p-profiles .l-top_menu-v2 .menu-dropdown.main.active > span,
+  body.p-achievements.p-profiles .l-top_menu-v2 .menu-dropdown > span:focus,
+  body.p-achievements.p-profiles .l-top_menu-v2 .menu-dropdown.active .submenu-triangle {
+    background-color: rgba(var(--bright-color), 0.05);
+  }
+  body.p-achievements.p-profiles .l-top_menu-v2 .submenu > .legend {
+    color: rgba(var(--light-color), 1);
+    background: rgba(var(--block-color), 0.7);
+  }
+}
+@media only screen and (min-width: 1025px) {
+  body.p-achievements.p-profiles .l-top_menu-v2:hover .global-search input {
+    background: rgba(var(--light-color), 0.07);
+  }
+  body.p-achievements.p-profiles .l-top_menu-v2.is-search-focus .global-search input {
+    background: rgba(var(--light-color), 0.12);
+  }
+}
+
+/* Ещё цвета на странице ачивок */
+.p-achievements.p-profiles .b-breadcrumbs > span:after
+{
+  color: rgba(var(--bright-color), var(--hundred)) !important;
+}
+.c-genres .block2 .cc-achievements .b-achievement {
+  background: rgba(0, 74, 112, 0.5);
+}
+.c-genres .block2 .cc-achievements .b-achievement .c-about .text {
+  color: #84bcf2;
+}
+.c-genres .block2 .cc-achievements .b-achievement .c-about .hint {
+  color: #78d6ff !important;
+}
+.c-genres .block2 .cc-achievements .b-achievement .c-about .progress .bar
+{
+  background: #00b8ff;
+}
+.c-genres .block2 .cc-achievements .b-achievement .c-about .progress {
+  background: rgba(0, 34, 52, 0.8);
+  border: 0.5px solid #002d41; 
+}
+.c-genres .block2 .cc-achievements .b-achievement .title
+{
+  color: #cddded;
+}
+.c-genres .block2 .cc-achievements .b-achievement .percent
+{
+ color: #9af0ff;
+}
+.c-genres .block2 .b-achievement img
+{
+  box-shadow: 0 0 2px 1px #9af0ff;
+}
+.block2 .cc-achievements .b-achievement {
+  background: rgba(132, 33, 60, 0.5);
+}
+.block2 .cc-achievements .b-achievement .c-about .text {
+  color: #de80a5;
+}
+.block2 .cc-achievements .b-achievement .c-about .hint {
+  color: #f38bc7 !important;
+}
+.block2 .cc-achievements .b-achievement .c-about .progress .bar
+{
+  background: #ec5f9e;
+}
+.block2 .cc-achievements .b-achievement .c-about .progress {
+  background: rgba(79, 15, 27, 0.8);
+  border: 0.5px solid #5e1429; 
+}
+.block2 .cc-achievements .b-achievement .title
+{
+  color: #deaae0;
+}
+.block2 .cc-achievements .b-achievement .percent
+{
+ color: #ffa2e6;
+}
+.block2 .b-achievement img
+{
+  box-shadow: 0 0 2px 1px #ffa2e6;
+}
+.p-achievements-index .c-franchises .b-badge[data-progress="100"]:after
+{
+  background: none;
+}
+body.p-achievements.p-profiles .l-top_menu-v2 .submenu
+{
+  background: rgba(var(--menu-back), 0.9);
+}
+body.p-achievements.p-profiles .l-top_menu-v2 .menu-dropdown a, body.p-achievements.p-profiles .l-top_menu-v2 .menu-dropdown a:before
+{
+  color: rgba(var(--white-color), 1);
+}
+body.p-achievements.p-profiles .l-top_menu-v2 .global-search .search-results
+{
+  background: rgba(var(--menu-back), 0.95);
+}
+body.p-achievements.p-profiles .l-top_menu-v2 .global-search .search-results .search-mode.active
+{
+  background: rgba(var(--bright-color), 0.05);
+}
+body.p-achievements.p-profiles .l-top_menu-v2 .global-search .search-results .search-mode.active:before
+{
+  background: linear-gradient(to right, rgba(var(--light-color), 0.7) 0%, rgba(var(--light-color), 0.7) 30%, rgba(var(--light-color), 0) 75%, rgba(var(--light-color), 0) 100%);
+}
+body.p-achievements.p-profiles .l-top_menu-v2 .global-search .search-results .search-mode:before
+{
+  background: linear-gradient(to right, rgba(var(--light-color), 0.5) 0%, rgba(var(--light-color), 0.5) 30%, rgba(var(--light-color), 0) 75%, rgba(var(--light-color), 0) 100%);
+}
+body.p-achievements.p-profiles .l-top_menu-v2 .global-search .search-results .nothing_found:hover, body.p-achievements.p-profiles .l-top_menu-v2 .global-search .search-results .nothing_found:focus, body.p-achievements.p-profiles .l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item:hover, body.p-achievements.p-profiles .l-top_menu-v2 .global-search .search-results .b-db_entry-variant-list_item:focus, body.p-achievements.p-profiles .l-top_menu-v2 .global-search .search-results .search-mode:focus, body.p-achievements.p-profiles .l-top_menu-v2 .global-search .search-results .search-mode:hover
+{
+  background: linear-gradient(168deg, rgba(var(--bright-color), 0.05) 0%, rgba(var(--bright-color), 0.15) 100%);
+}
+body.p-achievements.p-profiles .search-mode, body.p-achievements.p-profiles input.has-value
+{
+  color: rgba(var(--white-color), 1) !important;
+}
+.l-top_menu-v2 .global-search .search-results .search-mode:hover:before
+{
+  background: linear-gradient(to right, rgba(var(--hover-color), 0.7) 0%, rgba(var(--hover-color), 0.7) 30%, rgba(var(--light-color), 0) 75%, rgba(var(--light-color), 0) 100%) !important;
+}
+body.p-achievements.p-profiles .headline, body.p-achievements.p-profiles .subheadline
+{
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.2);
+  background: rgba(var(--block-color), 0.6);
+}
+body.p-achievements.p-profiles .b-options-floated
+{
+  box-shadow: inset 0 -2px 6px 2px rgba(0, 0, 0, 0.2);
+  background: rgba(var(--block-color), 0.6);
+}
+body.p-achievements.p-profiles .headline, body.p-achievements.p-profiles .subheadline
+{
+  color: rgba(var(--bright-color), 1) !important;
+}
+body.p-achievements.p-profiles .b-options-floated, body.p-achievements.p-profiles .b-options-floated a
+{
+  color: rgba(var(--light-color), 1);
+}
+body.p-achievements.p-profiles .headline:after, body.p-achievements.p-profiles .subheadline:after, body.p-achievements.p-profiles .headline:before, body.p-achievements.p-profiles .subheadline:before
+{
+  color: rgba(var(--light-color), 1) !important;
+}
+.p-achievements.p-profiles-index .c-franchises .b-badge[data-progress="100"]::after
+{
+  color: #ffffff;
+  box-shadow: 0 0 2px 2px rgba(var(--white-color), 0.6) inset;
+}
+.b-achievement.is-badge:not([data-progress]):hover:after, .b-achievement.is-badge[data-progress="0"]:hover:after, .b-achievement.is-badge[data-progress="100"]:hover:after
+{
+  opacity: 1;
+}
+.p-achievements.p-profiles-index .c-franchises .b-badge[data-progress="100"]:hover:after
+{
+  box-shadow: 0 0 2px 3px rgba(var(--white-color), 0.7) inset;
+}
+.l-top_menu-v2 .global-search .search-results .nothing_found
+{
+  color: rgba(var(--dark-color), 1);
+}
