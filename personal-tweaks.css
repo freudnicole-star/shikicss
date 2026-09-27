@@ -232,7 +232,10 @@ body {
     content: "";
     display: block;
     height: 300px; /* высота обложки */
+  	/*
     background: url(//i.ibb.co/4gfgSNPy/newbanner.gif) repeat;
+  	*/
+  	background: url(https://psv4.vkuserphoto.ru/s/v1/d/9YIxxvekZG5z1ZDpfLQ7uAmRuHD2Q8Fvi-H-k0HA7P7eFGpQdgk_o0ZLGKn7FMkSlLBbDphX3UrHuriKEAdJ3UweZcXrZbZUFuzEI1BpdGHnn132mG84Ww/Sad-banner.gif) repeat;
     background-size: cover;
     margin: -15px;
     margin-bottom: 5px; /* отступ от нижней границы обложки */
