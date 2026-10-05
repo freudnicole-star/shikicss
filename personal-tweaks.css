@@ -204,10 +204,10 @@ body.p-achievements.p-profiles .cc-achievements
 .profile-content .b-user.avatar:hover, .profile-content .b-club .logo:hover, .p-profiles .profile-head .c-history .entry:hover, .b-catalog_entry:hover {
     filter: grayscale(0%) !important;
 }
-body.p-achievements.p-profiles.p-profiles .b-badge img {
+.p-achievements-index .c-franchises .b-badge {
   filter: grayscale(80%) !important;
 }
-body.p-achievements.p-profiles.p-profiles .b-badge img:hover {
+.p-achievements-index .c-franchises .b-badge:hover {
   filter: grayscale(20%) !important;
 }
 
