@@ -204,12 +204,6 @@ body.p-achievements.p-profiles .cc-achievements
 .profile-content .b-user.avatar:hover, .profile-content .b-club .logo:hover, .p-profiles .profile-head .c-history .entry:hover, .b-catalog_entry:hover {
     filter: grayscale(0%) !important;
 }
-.p-achievements-index .c-franchises .b-badge {
-  filter: grayscale(80%) !important;
-}
-.p-achievements-index .c-franchises .b-badge:hover {
-  filter: grayscale(20%) !important;
-}
 
 /* Цвет комментов в коллекциях */
 .b-catalog_entry .cover .image-decor>.text
