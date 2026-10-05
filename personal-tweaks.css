@@ -179,22 +179,6 @@ body.p-achievements.p-profiles .cc-achievements
   flex-wrap: wrap;
 }
 
-/* Замена постеров ачивок */
-.b-achievement .c-image a::after,
-.b-badge::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--user-image, none);
-  pointer-events: none;
-  
-  border-radius: 11px;
-  width: 104%;
-  height: 106%;
-  max-width: 105%;
-  margin-left: -2%; 
-}
-
 /* Небольшой фикс текста в некоторых плитках */
 .b-catalog_entry .cover .misc span.role {
   overflow: hidden;
