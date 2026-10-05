@@ -47,22 +47,6 @@
   --custom-image: url("https://sun9-20.userapi.com/s/v1/ig2/0YCmRDf00BlpVwCjK6XdIwot1qa6-QLY7HdR25lyVOI6fGaNCesuBYtHqVAzEzLEkJO2dcj_kbL9bHLcddmObjPT.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
 }
 
-/* Замена постеров ачивок */
-.b-achievement .c-image a::after,
-.b-badge::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--user-image, none);
-  pointer-events: none;
-  
-  border-radius: 11px;
-  width: 104%;
-  height: 106%;
-  max-width: 105%;
-  margin-left: -2%; 
-}
-
 /* Замена общего (lvl6) */
 .level-6 [href*="/achievements/common/animelist"] {
   --user-image: url("https://sun9-58.userapi.com/s/v1/ig2/oaKakltVohmZcVlAXiWiJBtC1J3uvoYHEr2yEqYT-rsZCG6uQUm97DfrvsoQbHCQE_u1MX7An4_Zv34tI7zKgTQh.jpg?quality=95&as=32x16,48x24,72x36,108x54,160x80,240x120,360x180,480x240,500x250&from=bu&cs=500x0") center / cover;
