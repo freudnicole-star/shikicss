@@ -168,12 +168,20 @@ body.p-achievements.p-profiles.p-profiles .b-badge img {
   margin-left: -2%;
 }
 */
+
+/*
 .p-achievements.p-profiles-index .c-franchises .b-badge::after, .p-achievements.p-profiles-index .c-franchises .b-badge::before {
     margin-left: 0%;
 }
+*/
+.p-achievements.p-profiles-index .c-franchises .b-badge::before {
+    margin-left: 0%;
+}
+/*
 body.p-achievements.p-profiles.p-profiles .b-badge img {
     margin-left: 0% !important;
 }
+*/
 .p-achievements.p-profiles-index .c-franchises .b-badge::after
 {
   width: calc(100% - 10px) !important;
