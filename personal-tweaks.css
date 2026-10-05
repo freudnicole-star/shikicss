@@ -158,14 +158,16 @@ tr.user_rate.selectable.editable:after {
 
 /* Фиксы отображения франшизных и общих ачивок */
 body.p-achievements.p-profiles.p-profiles .b-badge img {
-  margin-left: -2%;
+  /* margin-left: -2%; */
   border-radius: 9px;
   overflow: clip;
 }
+/*
 .p-achievements.p-profiles-index .c-franchises .b-badge::after, .p-achievements.p-profiles-index .c-franchises .b-badge::before
 {
   margin-left: -2%;
 }
+*/
 .p-achievements.p-profiles-index .c-franchises .b-badge::after
 {
   width: calc(100% - 10px) !important;
