@@ -2,6 +2,7 @@
   content: "*Graviteck’s Silence*";
 }
 
+/* Цветовая схема */
 @media screen and (min-width: 1px) {
   html:root {
 	--white-color: 255, 255, 255;
@@ -32,6 +33,29 @@
     --hundred: 1;
   }
 }
+
+/* Фоновое изображение */
+body {
+  background: url("https://psv4.userapi.com/s/v1/d/ix1DlZ6AByhQ_pzfyo9B7SkKtM6tA9O7n1qkCCGhDt52HKRQKQR0T09tl80CeS79D9s-fZc7moStQINw-NSm_sV3Lqm_9KAHqLQ7k36Xx8BQst3l85QY4g/NovyShikifon.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Баннер над профилем */
+@media (min-width: 1200px) {
+  .p-profiles-show .profile-head:before {
+    content: "";
+    display: block;
+    height: 300px; /* высота обложки */
+  	/*
+    background: url(//i.ibb.co/4gfgSNPy/newbanner.gif) repeat;
+  	*/
+  	background: url(https://psv4.vkuserphoto.ru/s/v1/d/9YIxxvekZG5z1ZDpfLQ7uAmRuHD2Q8Fvi-H-k0HA7P7eFGpQdgk_o0ZLGKn7FMkSlLBbDphX3UrHuriKEAdJ3UweZcXrZbZUFuzEI1BpdGHnn132mG84Ww/Sad-banner.gif) repeat;
+    background-size: cover;
+    margin: -15px;
+    margin-bottom: 5px; /* отступ от нижней границы обложки */
+    border-radius: 15px 15px 0 0;
+  }
 
 /* Убрать анимацию графика активности */
 .activity .graph.vertical .line .bar {
@@ -93,7 +117,7 @@ tr.user_rate.selectable.editable:after {
     display: none;
 }
 
-/* Выравнял количество коллекций на малом разрешении */
+/* Выровнял количество коллекций на малом разрешении */
 @media screen and (max-width: 767px) {
   .p-profiles .profile-head .c-info .c-additionals div a, .p-profiles .profile-head .c-info .c-additionals div span {
     padding: 1.3rem 15px 10px 15px;
@@ -107,45 +131,10 @@ tr.user_rate.selectable.editable:after {
   }
 }
 
-/* Фоновое изображение */
-body {
-  background: url("https://psv4.userapi.com/s/v1/d/ix1DlZ6AByhQ_pzfyo9B7SkKtM6tA9O7n1qkCCGhDt52HKRQKQR0T09tl80CeS79D9s-fZc7moStQINw-NSm_sV3Lqm_9KAHqLQ7k36Xx8BQst3l85QY4g/NovyShikifon.jpg") no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 /* Полупрозрачная рамка */
 @media (min-width: 1200px) {
 .l-page { outline: 20px solid rgba(255, 255, 255, 0.3); margin-bottom: 20px; }
 }
-
-/* Гиф аватарка
-.p-profiles .profile-head .avatar {
-	background: url("https://psv4.userapi.com/s/v1/d/RsEQEfRHVU8eZ-Tg8gEY8yfRMk-J3t6XDiSxQvYJ7nhgZojpGiKykhk0Hs3YSll1biP92hbRRFMJx2DtdYhTlzwI4XsXrqy89sqk0tx-UKstun5cgOLH4w/Snap.gif") center / cover;
-  	border-radius: 15px
-}
-
-/* Скрыть статичный аватар
-.p-profiles .profile-head .avatar img {
-	visibility: hidden;
-}
-*/
-
-/* Баннер над профилем */
-@media (min-width: 1200px) {
-  .p-profiles-show .profile-head:before {
-    content: "";
-    display: block;
-    height: 300px; /* высота обложки */
-  	/*
-    background: url(//i.ibb.co/4gfgSNPy/newbanner.gif) repeat;
-  	*/
-  	background: url(https://psv4.vkuserphoto.ru/s/v1/d/9YIxxvekZG5z1ZDpfLQ7uAmRuHD2Q8Fvi-H-k0HA7P7eFGpQdgk_o0ZLGKn7FMkSlLBbDphX3UrHuriKEAdJ3UweZcXrZbZUFuzEI1BpdGHnn132mG84Ww/Sad-banner.gif) repeat;
-    background-size: cover;
-    margin: -15px;
-    margin-bottom: 5px; /* отступ от нижней границы обложки */
-    border-radius: 15px 15px 0 0;
-  }
   
 /* Фикс некорректного отображения онлайна */
 .p-profiles .profile-head .c-brief header.head .misc:before {
@@ -214,6 +203,22 @@ body.p-achievements.p-profiles .cc-achievements
 }
 .profile-content .b-user.avatar:hover, .profile-content .b-club .logo:hover, .p-profiles .profile-head .c-history .entry:hover, .b-catalog_entry:hover {
     filter: grayscale(0%) !important;
+}
+body.p-achievements.p-profiles.p-profiles .b-badge img {
+  filter: grayscale(80%) !important;
+}
+body.p-achievements.p-profiles.p-profiles .b-badge img:hover {
+  filter: grayscale(20%) !important;
+}
+
+/* Цвет комментов в коллекциях */
+.b-catalog_entry .cover .image-decor>.text
+{
+  background: linear-gradient(to bottom, rgba(var(--menu-back), 0.6) 5%, rgba(var(--menu-back), 0.9) 66%);
+}
+.b-catalog_entry .cover .image-decor > .text:before
+{
+  background: unset;
 }
 
 /* Фикс фона в ачивках */
@@ -354,17 +359,6 @@ body.p-achievements.p-profiles
 {
   color: rgba(var(--light-color), 1);
 }
-
-/* Цвет комментов в коллекциях */
-.b-catalog_entry .cover .image-decor>.text
-{
-  background: linear-gradient(to bottom, rgba(var(--menu-back), 0.6) 5%, rgba(var(--menu-back), 0.9) 66%);
-}
-.b-catalog_entry .cover .image-decor > .text:before
-{
-  background: unset;
-}
-
 /* Цвета менюшки в шапке (при взаимодействии) */
 @media only screen and (min-width: 768px) {
   body.p-achievements.p-profiles .l-top_menu-v2 .menu-dropdown.profile.active .submenu-triangle img {
@@ -400,7 +394,6 @@ body.p-achievements.p-profiles
     background: rgba(var(--light-color), 0.12);
   }
 }
-
 /* Ещё цвета на странице ачивок */
 .p-achievements.p-profiles .b-breadcrumbs > span:after
 {
