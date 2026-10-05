@@ -172,7 +172,7 @@ body.p-achievements.p-profiles.p-profiles .b-badge img {
     margin-left: 0%;
 }
 body.p-achievements.p-profiles.p-profiles .b-badge img {
-    margin-left: 0%;
+    margin-left: 0% !important;
 }
 .p-achievements.p-profiles-index .c-franchises .b-badge::after
 {
