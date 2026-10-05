@@ -61,6 +61,10 @@
   height: 106%;
   max-width: 105%;
 }
+.b-achievement .c-image a::after
+{
+  margin-left: -2%;
+}
 
 /* Замена общего (lvl6) */
 .level-6 [href*="/achievements/common/animelist"] {
