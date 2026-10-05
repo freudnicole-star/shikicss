@@ -1,5 +1,5 @@
 .l-footer:after {
-  content: "*Gray Silence + Custom*";
+  content: "*Graviteck’s Silence*";
 }
 
 @media screen and (min-width: 1px) {
@@ -130,101 +130,6 @@ body {
 	visibility: hidden;
 }
 */
-
-/* Замена постера для Кадзуя Наканиси *//*
-[href*="people/55494-kazuya-nakanishi"] {
-  --show-default: 0;
-  --custom-image: url("https://sun9-82.userapi.com/s/v1/ig2/GgIAyn3zBzGKBHUkVPDxQqBb9CTFYfOf6DXNAnaX8TSv2AFhj29vtE0AE76GuxzD_xyqzf8EZNsYiBm_r-lJdpjU.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
-}
-*/
-
-/* Замена постера для Фумия Томодзаки */
-[href*="characters/165743-"] {
-  --show-default: 0;
-  --custom-image: url("https://sun9-24.userapi.com/s/v1/ig2/F2UXyzeMEHlXUxRbHIYc7JKazy5F4IR7p09pfeRlX__GPj4NBpTRxh7nGyDx21ugzaJmzzBMdnqxxH0SI_D3RRQb.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
-}
-
-/* Замена постера для Анна Кёяма */
-[href*="characters/170-anna-kyouyama"] {
-  --show-default: 0;
-  --custom-image: url("https://sun9-52.userapi.com/s/v1/ig2/31LNNRicIAdAKPlvYs7VS5kTN6yhfJXbNun1AhVrgZk5bQf9ndphs3NX7ytxJXVAKVVKb-tyWc50o7xHaHQRkrCX.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
-}
-
-/* Замена постера для Йо Асакура */
-[href*="characters/167-you-asakura"] {
-  --show-default: 0;
-  --custom-image: url("https://sun9-45.userapi.com/s/v1/ig2/N7dfPp98czXQeGXtegQAINJUcMAkKPHorNWe_iRHWyMnbuicQPjShkUbQCVMxs-SJlTdQ0fXVxtuFDrluglDBTMT.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
-}
-
-/* Замена постера для Хачиман Хикигая */
-[href*="characters/67065-hachiman-hikigaya"] {
-  --show-default: 0;
-  --custom-image: url("https://sun9-7.userapi.com/s/v1/ig2/IIwMDXF2Mt2INC4H7gCqQOeOiMTtJ0rq-ymx0e8T5Z51ifWwu5AU2HJ483rl2HtF9uGoo0wzbUA07QWlPS87fRnE.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
-}
-
-/* Замена постера для Сид Кагэно */
-[href*="characters/171572-cid-kagenou"] {
-  --show-default: 0;
-  --custom-image: url("https://sun9-82.userapi.com/s/v1/ig2/GgIAyn3zBzGKBHUkVPDxQqBb9CTFYfOf6DXNAnaX8TSv2AFhj29vtE0AE76GuxzD_xyqzf8EZNsYiBm_r-lJdpjU.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
-}
-
-/* Замена постера для Ко Ямори */
-[href*="characters/177824-kou-yamori"] {
-  --show-default: 0;
-  --custom-image: url("https://sun9-88.userapi.com/s/v1/ig2/xzthW8LnSlFwcU5JKcy9e38l6Tb81jag7OzrKm6eUfvtJG1gIxuxLKsmH86BPux8lPTT_JEs1dn6NndRCbUq5mVX.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&u=PD3PhAtzga8YruyaBbmx87UpYHWhAWwHn2EFZjwpbJo&cs=160x0");
-}
-
-/* Замена постера для Ироха Ишики */
-[href*="characters/110743-iroha-isshiki"] {
-  --show-default: 0;
-  --custom-image: url("https://sun9-20.userapi.com/s/v1/ig2/0YCmRDf00BlpVwCjK6XdIwot1qa6-QLY7HdR25lyVOI6fGaNCesuBYtHqVAzEzLEkJO2dcj_kbL9bHLcddmObjPT.jpg?quality=95&as=32x50,48x75,72x112,108x168,160x249&from=bu&cs=160x0");
-}
-
-/* Замена постеров ачивок */
-.b-achievement .c-image a::after,
-.b-badge::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--user-image, none);
-  pointer-events: none;
-  
-  border-radius: 11px;
-  width: 104%;
-  height: 106%;
-  max-width: 105%;
-  margin-left: -2%; 
-}
-
-/* Замена общего (lvl6) */
-.level-6 [href*="/achievements/common/animelist"] {
-  --user-image: url("https://sun9-58.userapi.com/s/v1/ig2/oaKakltVohmZcVlAXiWiJBtC1J3uvoYHEr2yEqYT-rsZCG6uQUm97DfrvsoQbHCQE_u1MX7An4_Zv34tI7zKgTQh.jpg?quality=95&as=32x16,48x24,72x36,108x54,160x80,240x120,360x180,480x240,500x250&from=bu&cs=500x0") center / cover;
-}
-
-/* Замена романтика (lvl2) */
-.level-2 [href*="/achievements/genre/romance"] {
-  --user-image: url("https://sun9-46.userapi.com/s/v1/ig2/wegtXTkblnxT82cWHJ3YwEyYfNA46zlNTzw1Da1zmYMeoMr4wZL5cYUuvQ2Wp4vwA-90t1GBWrlcoz9pRo15OaCW.jpg?quality=95&as=32x16,48x24,72x36,108x54,160x80,240x120,360x180,480x240,500x250&from=bu&u=AUeUzUlR2tKlS9HevkjIjf2T9ym_Re-_RlbA6MgwYPw&cs=500x0") center / cover;
-}
-
-/* Замена комедии (lvl1) */
-.level-1 [href*="/achievements/genre/comedy"] {
-  --user-image: url("https://sun9-24.userapi.com/s/v1/ig2/C8BEhfAjEPlO0O3Stos8Dqk_-tvMq8sFYu471l8WWh-oYTUwIrLPKDLonnfygNgLeKqeHiy5rVgs1pFgggCNFxx2.jpg?quality=95&as=32x16,48x24,72x36,108x54,160x80,240x120,360x180,480x240,500x250&from=bu&cs=500x0") center / cover;
-}
-
-/* Замена драмы (lvl2) */
-.level-2 [href*="/achievements/genre/drama"] {
-  --user-image: url("https://sun9-30.userapi.com/s/v1/ig2/eJrss4l3G65c9je8e6vVnc_xmRKEN1bGSQKAhuGFENYG283BPWyru2eTDEOo-V4WbSR0KiDZ-nzdCW7aX5YZAYZ1.jpg?quality=95&as=32x16,48x24,72x36,108x54,160x80,240x120,360x180,480x240,500x250&from=bu&cs=500x0") center / cover;
-}
-
-/* Замена безумия (lvl1) */
-.level-1 [href*="/achievements/genre/dementia_psychological"] {
-  --user-image: url("https://sun9-5.userapi.com/s/v1/ig2/lD7ngfcC3rF24OSA9dy6T1IODEXUsr4KF7Km_RN8Lu36DBc5rCMt7okBWQbIV_bobMLkyNvmtovEaITWLyXLeCAk.jpg?quality=95&as=32x16,48x24,72x36,108x54,160x80,240x120,360x180,480x240,500x250&from=bu&cs=500x0") center / cover;
-}
-
-/* Замена военного (lvl1) */
-.level-1 [href*="/achievements/genre/military"] {
-  --user-image: url("https://sun9-81.userapi.com/s/v1/ig2/3Z-7n22AdQ0bupHmna9tAdEqtMY8C_jkvAUlI0tz3Q9GhiIS6SSonhJMX1hoRd8HPOt_bNVvyti7Zu40tmXUw2ME.jpg?quality=95&as=32x16,48x24,72x36,108x54,160x80,240x120,360x180,480x240,500x250&from=bu&cs=500x0") center / cover;
-}
 
 /* Баннер над профилем */
 @media (min-width: 1200px) {
